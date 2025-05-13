@@ -1,5 +1,5 @@
 ---
-import LogoHori from "../components/logo/LogoHori.astro";
+import LogoFooter from "../components/logo/LogoFooter.astro";
 import LogoIg from "../components/logo/Ig.astro";
 const currentYear = new Date().getFullYear()
 ---
@@ -10,11 +10,7 @@ class="p-4 md:p-8 lg:p-10">
     data-aos="fade-up"
     class="mx-auto max-w-screen-xl text-center">
         <a href="#top" class="flex items-center justify-center mb-10">
-            <LogoHori class="logo h-11 text-zinc-900 dark:text-zinc-100" />
-            <span
-                class="block caprasimo text-zinc-900 dark:text-zinc-100 ms-3 text-4xl"
-                >ncima</span
-            >
+            <LogoFooter class="logo h-25 text-zinc-900 dark:text-zinc-100" />
         </a>
 
         <ul
@@ -39,14 +35,15 @@ class="p-4 md:p-8 lg:p-10">
                 >
             </li>
         </ul>
-        <span class="text-xs text-gray-500 sm:text-center dark:text-gray-400"
-            >© {currentYear} <a href="#" class="hover:underline">Encima Studio™</a>.
-            Todos los derechos reservados.</span
-        >
+        <span class="text-base text-gray-500 sm:text-center dark:text-gray-400">
+            © {currentYear} <a href="#top" class="hover:underline">Encima Studio™</a>.
+            Todos los derechos reservados.</span>
+        <span class="bg-gray-900 dark:bg-gray-200 text-base text-gray-100 dark:text-gray-900 px-2 sm:text-center dark:text-gray-400">
+            Hecho con ♥️ por <a href="https://www.rodfuentealba.com/" target="_blank" class="hover:underline">rodFuentealba</span>
     </div>
     <div 
     class="flex justify-center mt-10">
-        <a href="https://www.instagram.com/byencima/" target="_blank" class="flex items-center transition duration-100 hover:scale-110 hover:text-amber-500">
+        <a href="https://www.instagram.com/byencima/" target="_blank" class="flex items-center transition duration-100 text-gray-900 dark:text-gray-200 hover:scale-110 hover:text-amber-500">
             <LogoIg class="size-6 mr-2" alt="Logo Instagram de byencima encimastudio encima"/>
             <h1 class="font-extrabold">@byencima</h1>
         </a>
