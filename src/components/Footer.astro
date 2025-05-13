@@ -1,0 +1,57 @@
+---
+import LogoHori from "../components/logo/LogoHori.astro";
+import LogoIg from "../components/logo/Ig.astro";
+const currentYear = new Date().getFullYear()
+---
+
+<footer class="p-4 md:p-8 lg:p-10">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <a href="#top" class="flex items-center justify-center mb-10">
+            <LogoHori class="logo h-11 text-zinc-900 dark:text-zinc-100" />
+            <span
+                class="hidden md:block caprasimo text-zinc-900 dark:text-zinc-100 ms-3 text-4xl"
+                >ncima</span
+            >
+        </a>
+
+        <ul
+            class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white"
+        >
+            <li>
+                <a href="#encima" class="mr-4 hover:underline md:mr-6">Somos</a>
+            </li>
+            <li>
+                <a href="#services" class="mr-4 hover:underline md:mr-6"
+                    >Servicios</a
+                >
+            </li>
+            <li>
+                <a href="#post" class="mr-4 hover:underline md:mr-6"
+                    >Postproducción</a
+                >
+            </li>
+            <li>
+                <a href="#project" class="mr-4 hover:underline md:mr-6"
+                    >Proyectos</a
+                >
+            </li>
+        </ul>
+        <span class="text-xs text-gray-500 sm:text-center dark:text-gray-400"
+            >© {currentYear} <a href="#" class="hover:underline">Encima Studio™</a>.
+            Todos los derechos reservados.</span
+        >
+    </div>
+    <div class="flex justify-center mt-10">
+        <a href="https://www.instagram.com/byencima/" target="_blank" class="flex items-center transition duration-100 hover:scale-110 hover:text-amber-500">
+            <LogoIg class="size-6 mr-2" alt="Logo Instagram de byencima encimastudio encima"/>
+            <h1 class="font-extrabold">@byencima</h1>
+        </a>
+    </div>
+</footer>
+
+<style>
+    .caprasimo {
+        font-family: "Caprasimo", system-ui;
+        position: relative;
+    }
+</style>

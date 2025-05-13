@@ -7,6 +7,7 @@ import Info from "../components/Info.astro"
 import Services from "../components/Services.astro"
 import PostPro from "../components/PostPro.astro"
 import Edit from "../components/Edit.astro"
+import Footer from "../components/Footer.astro"
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -18,21 +19,29 @@ import Edit from "../components/Edit.astro"
 >
 	<Welcome />
 
-	<SectionContainer id="Services" class="py-30 px-8 md:px-0 text-center">
+	<SectionContainer id="encima" class="py-30 px-8 md:px-0 text-center">
 		<Info></Info>
+	</SectionContainer>
+
+	<SectionContainer id="services" class="py-30 px-8 md:px-0 text-center">
+		
 		<button type="button" class="mt-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200">Servicios</button>
 		<Services></Services>
 	</SectionContainer>
 	
-	<div id="Post" class="px-8 md:px-0 text-center">
+	<div id="post" class="px-8 md:px-0 text-center">
 		<SectionContainer>
 			<Edit/>
 		</SectionContainer>
 		<PostPro />
 	</div>
 
-	<SectionContainer id="Projects" class="py-30 px-8 md:px-0 text-center">
+	<SectionContainer id="project" class="py-30 px-8 md:px-0 text-center">
 		<button type="button" class="mb-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200">Proyectos</button>
 		<Projects />
 	</SectionContainer>
+
+	<Footer />
 </Layout>
+
+
