@@ -2,12 +2,12 @@
 import SectionContainer from "../components/SectionContainer.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import Projects from "../components/Projects.astro"
-import Info from "../components/Info.astro"
-import Services from "../components/Services.astro"
-import PostPro from "../components/PostPro.astro"
-import Edit from "../components/Edit.astro"
-import Footer from "../components/Footer.astro"
+import Projects from "../components/Projects.astro";
+import Info from "../components/Info.astro";
+import Services from "../components/Services.astro";
+import PostPro from "../components/PostPro.astro";
+import Edit from "../components/Edit.astro";
+import Footer from "../components/Footer.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -20,28 +20,46 @@ import Footer from "../components/Footer.astro"
 	<Welcome />
 
 	<SectionContainer id="encima" class="py-30 px-8 md:px-0 text-center">
-		<Info></Info>
+		<Info />
 	</SectionContainer>
 
 	<SectionContainer id="services" class="py-30 px-8 md:px-0 text-center">
-		
-		<button type="button" class="mt-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200">Servicios</button>
-		<Services></Services>
+		<button
+			type="button"
+			class="mt-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
+			>Servicios</button
+		>
+		<Services />
 	</SectionContainer>
-	
+
 	<div id="post" class="px-8 md:px-0 text-center">
 		<SectionContainer>
-			<Edit/>
+			<Edit />
 		</SectionContainer>
 		<PostPro />
 	</div>
 
-	<SectionContainer id="project" class="py-30 px-8 md:px-0 text-center">
-		<button type="button" class="mb-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200">Proyectos</button>
+	<SectionContainer id="project" class="pt-30 px-8 md:px-0 text-center">
+		<button
+			type="button"
+			class="mb-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
+			>Proyectos</button
+		>
 		<Projects />
+		<div class="flex items-center justify-center pt-10">
+			<a
+				href="https://www.instagram.com/byencima/"
+				target="_blank"
+				class="transition duration-100 hover:scale-105"
+			>
+				<button
+					type="button"
+					class="mb-30 text-gray-900 border border-gray-800 hover:bg-amber-500 hover:text-amber-900 hover:border-amber-500 hover:cursor-pointer font-medium rounded-lg text-sm px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
+					>Ver todos los proyectos</button
+				>
+			</a>
+		</div>
 	</SectionContainer>
 
 	<Footer />
 </Layout>
-
-
