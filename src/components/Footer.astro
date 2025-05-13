@@ -4,8 +4,11 @@ import LogoIg from "../components/logo/Ig.astro";
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class="p-4 md:p-8 lg:p-10">
-    <div class="mx-auto max-w-screen-xl text-center">
+<footer
+class="p-4 md:p-8 lg:p-10">
+    <div 
+    data-aos="fade-up"
+    class="mx-auto max-w-screen-xl text-center">
         <a href="#top" class="flex items-center justify-center mb-10">
             <LogoHori class="logo h-11 text-zinc-900 dark:text-zinc-100" />
             <span
@@ -41,7 +44,8 @@ const currentYear = new Date().getFullYear()
             Todos los derechos reservados.</span
         >
     </div>
-    <div class="flex justify-center mt-10">
+    <div 
+    class="flex justify-center mt-10">
         <a href="https://www.instagram.com/byencima/" target="_blank" class="flex items-center transition duration-100 hover:scale-110 hover:text-amber-500">
             <LogoIg class="size-6 mr-2" alt="Logo Instagram de byencima encimastudio encima"/>
             <h1 class="font-extrabold">@byencima</h1>

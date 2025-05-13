@@ -11,42 +11,55 @@ const services = [
     description: 'Capturamos paisajes y aventuras con drones y cámaras de alta resolución',
     image: '/projects/services/service-01.webp',
     icon: Service01,
-    span: 'col-span-full md:col-span-3'
+    span: 'col-span-full md:col-span-3',
+    aos: 'fade-up',
+    aosDelay: '0'
   },
   {
     title: 'empresas',
     description: 'Contenido audiovisual corporativo que resalta tu marca',
     image: '/projects/services/service-02.webp',
     icon: Service02,
-    span: 'col-span-full md:col-span-2'
+    span: 'col-span-full md:col-span-2',
+    aos: 'fade-up',
+    aosDelay: '200'
   },
   {
     title: 'eventos',
     description: 'Registramos momentos clave de tu evento, desde bodas hasta conferencias, con un toque único',
     image: '/projects/services/service-03.webp',
     icon: Service03,
-    span: 'col-span-full md:col-span-2'
+    span: 'col-span-full md:col-span-2',
+    aos: 'fade-up',
+    aosDelay: '400'
   },
   {
     title: 'indoor',
     description: 'Grabamos espacios interiores con equipos profesionales, cuidando la iluminación y la estabilidad de cada toma',
     image: '/projects/services/service-04.webp',
     icon: Service04,
-    span: 'col-span-full md:col-span-3'
+    span: 'col-span-full md:col-span-3',
+    aos: 'fade-up',
+    aosDelay: '600'
   },
   {
     title: 'deportivos',
     description: 'Capturamos la energía de competencias deportivas con tomas aéreas dinámicas y seguras. Ideal para eventos en estadios, carreras, partidos o actividades al aire libre que buscan una cobertura audiovisual impactante',
     image: '/projects/services/service-05.webp',
     icon: Service05,
-    span: 'col-span-full'
+    span: 'col-span-full',
+    aos: 'fade-up',
+    aosDelay: '800'
   },
 ];
 ---
 
 <div class="grid gap-6 md:grid-cols-5 md:gap-6 mt-30">
-  {services.map(({ title, description, image, icon: Icon, span }) => (
-    <div class={`${span} group relative h-[500px] rounded-xl overflow-hidden`}>
+  {services.map(({ aos,aosDelay, title, description, image, icon: Icon, span }) => (
+    <div 
+    data-aos={`${aos}`}
+    data-aos-delay={`${aosDelay}`}
+    class={`${span} group relative h-[500px] rounded-xl overflow-hidden`}>
       <div class="absolute inset-0 z-0 transition duration-500 group-hover:scale-110">
         <img class="object-cover object-top w-full h-full" loading="lazy" src={image} />
       </div>

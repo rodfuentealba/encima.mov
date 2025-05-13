@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import 'aos/dist/aos.css';
+
 
 .mt-n2 {
  margin-top: -2rem;

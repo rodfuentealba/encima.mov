@@ -9,6 +9,8 @@ const project = [
         gridClass: "md:col-start-1 md:row-start-1 md:row-span-2",
         image: "/assets/Projects/Project01.mp4",
         link: "https://www.instagram.com/p/DCiAVp6MNm7/",
+        aos: 'fade-up',
+        aosDelay: '0'
     },
     {
         id:"project2",
@@ -17,6 +19,8 @@ const project = [
         gridClass: "md:col-start-2 md:row-start-2 md:row-span-2",
         image: "/assets/Projects/Project02.mp4",
         link: "https://www.instagram.com/p/C7DRxQqubIH/",
+        aos: 'fade-up',
+        aosDelay: '200'
     },
 ];
 ---
@@ -25,8 +29,12 @@ const project = [
     <ol class="projects grid grid-cols-1 gap-8 md:gap-24 md:grid-cols-2 lg:gap-44">
         {
             project.map((project) => (
-                <li id={project.id} class={`flex flex-col ${project.gridClass}`}>
-                    <div class="relative flex flex-col items-center col-span-6 row-span-5 transition duration-500 ease-in-out transform hover:shadow-xl overflow-clip rounded-xl md:group-hover:-translate-y-1">
+                <li 
+                data-aos={`${project.aos}`}
+                data-aos-delay={`${project.aosDelay}`}
+                id={project.id} class={`flex flex-col ${project.gridClass}`}>
+                    <div 
+                    class="relative flex flex-col items-center col-span-6 row-span-5 transition duration-500 ease-in-out transform hover:shadow-xl overflow-clip rounded-xl md:group-hover:-translate-y-1">
                         {" "}
                         <a
                             href={project.link} target="_blank"

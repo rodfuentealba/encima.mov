@@ -22,6 +22,16 @@ const { description, title } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script src="https://unpkg.com/two-up-element@1"></script>
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+		<script is:inline>
+		window.addEventListener('DOMContentLoaded', () => {
+			AOS.init({
+			duration: 800,
+			once: false,
+			mirror:true
+			});
+		});
+		</script>
 	</head>
 	<body class="bg-zinc-100 dark:bg-zinc-900 overflow-x-hidden">
 		<Header class="z-10"></Header>

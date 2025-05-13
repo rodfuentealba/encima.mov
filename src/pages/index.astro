@@ -19,14 +19,16 @@ import Footer from "../components/Footer.astro";
 >
 	<Welcome />
 
-	<SectionContainer id="encima" class="py-10 md:py-30 px-6 md:px-0 text-center">
+	<SectionContainer id="encima" class="py-10 md:py-30 md:pb-0 px-6 md:px-0 text-center">
 		<Info />
 	</SectionContainer>
 
 	<SectionContainer id="services" class="pb-20 md:py-30 px-6 md:px-0 text-center">
 		<button
+			data-aos="fade-up"
+			data-aos-delay="300"
 			type="button"
-			class="mt-10 md:mt-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
+			class="mt-10 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
 			>Servicios</button
 		>
 		<Services />
@@ -41,6 +43,7 @@ import Footer from "../components/Footer.astro";
 
 	<SectionContainer id="project" class="pt-30 px-6 md:px-0 text-center">
 		<button
+		data-aos="fade-up"
 			type="button"
 			class="mb-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
 			>Proyectos</button
@@ -53,6 +56,8 @@ import Footer from "../components/Footer.astro";
 				class="transition duration-100 hover:scale-105"
 			>
 				<button
+					data-aos="fade-up"
+					data-aos-delay="300"
 					type="button"
 					class="mb-10 md:mb-30 text-gray-900 border border-gray-800 hover:bg-amber-500 hover:text-amber-900 hover:border-amber-500 hover:cursor-pointer font-medium rounded-lg text-sm px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
 					>Ver todos los proyectos</button

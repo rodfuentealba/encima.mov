@@ -12,6 +12,7 @@
     "@fontsource/caprasimo": "^5.2.5",
     "@fontsource/poppins": "^5.2.5",
     "@tailwindcss/vite": "^4.0.13",
+    "aos": "^2.3.4",
     "astro": "^5.7.12",
     "autoprefixer": "^10.4.21",
     "gsap": "^3.12.7",
