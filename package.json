@@ -1,0 +1,22 @@
+{
+  "name": "encima-mov",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource/caprasimo": "^5.2.5",
+    "@fontsource/poppins": "^5.2.5",
+    "@tailwindcss/vite": "^4.0.13",
+    "astro": "^5.7.12",
+    "autoprefixer": "^10.4.21",
+    "gsap": "^3.12.7",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.13",
+    "two-up-element": "^1.0.1"
+  }
+}

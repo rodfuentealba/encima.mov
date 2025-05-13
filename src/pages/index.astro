@@ -1,0 +1,38 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Projects from "../components/Projects.astro"
+import Info from "../components/Info.astro"
+import Services from "../components/Services.astro"
+import PostPro from "../components/PostPro.astro"
+import Edit from "../components/Edit.astro"
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout
+	title="Encima Studio | Diseño, Contenido & Operador de Drone"
+	description="Contrata nuestros servicios audiovisuales / gráficos para darle mas vida a tus creaciones"
+>
+	<Welcome />
+
+	<SectionContainer id="Services" class="py-30 px-8 md:px-0 text-center">
+		<Info></Info>
+		<button type="button" class="mt-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200">Servicios</button>
+		<Services></Services>
+	</SectionContainer>
+	
+	<div id="Post" class="px-8 md:px-0 text-center">
+		<SectionContainer>
+			<Edit/>
+		</SectionContainer>
+		<PostPro />
+	</div>
+
+	<SectionContainer id="Projects" class="py-30 px-8 md:px-0 text-center">
+		<button type="button" class="mb-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200">Proyectos</button>
+		<Projects />
+	</SectionContainer>
+</Layout>

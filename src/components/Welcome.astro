@@ -1,0 +1,114 @@
+---
+const videos = [
+  { src: "/assets/Bg/bgWelcome1.MP4", poster: "/assets/Posters/poster1.png" },
+  // { src: "/assets/Bg/bgWelcome2.MP4", poster: "/assets/Posters/poster2.png" },
+  { src: "/assets/Bg/bgWelcome3.mov", poster: "/assets/Posters/poster3.png" },
+];
+
+// Elegimos un video aleatorio antes de renderizar
+const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+---
+
+
+<div id="container">
+  <main class="relative w-full h-screen flex items-center justify-between">
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover" poster={randomVideo.poster}>
+		<source src={randomVideo.src} type="video/mp4" />
+		Tu navegador no soporta el formato de video.
+	  </video>
+
+    <!-- Contenido sobre el video -->
+    <div class="relative z-10 flex flex-col items-center justify-center w-full h-full bg-zinc-900/30 p-10 text-zinc-100">
+      <h1 class="text-xl font-thin tracking-widest text-center">somos</h1>
+      <h1 class="caprasimo text-7xl md:text-9xl overflow-hidden relative">
+        <div class="rotator">
+			<span></span>
+			<span>contenido</span>
+			<span>drone</span>
+			<span>videos</span>
+			<span>diseño</span>
+        </div>
+      </h1>
+
+	
+	<span class="border border-amber-500 text-amber-500 text-xs uppercase font-medium me-2 px-4 py-1 rounded-sm mt-20 mb-5">Contáctame para una consulta gratuita</span>
+	<p class="w-full md:w-150 text-center text-pretty mx-auto font-light">Soy diseñador gráfico y operador de drone con un ojo fotográfico afinado. Te ayudo a crear contenido visual que esté por encima de todos.</p>
+
+	<div class="flex flex-col items-center">
+		<button class="animate-bounce mt-10 rounded-lg px-4 py-2 mb-5 font-bold bg-zinc-800 hover:bg-zinc-900 transition delay-100 duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+			Comunícate conmigo 😄
+		</button>
+	
+		<p class="text-xs transition delay-100 duration-200 ease-in-out hover:scale-105">o desplácese <a href="#Projects" class="hover:underline">hacia abajo para explorar más</a></p>
+	</div>
+    </div>
+  </main>
+</div>
+
+<script>
+	import { gsap } from 'gsap';
+	
+	document.addEventListener('DOMContentLoaded', () => {
+		const words = document.querySelectorAll(".rotator > span");  // Seleccionamos las palabras
+		
+		// Inicializamos un timeline para animar las palabras
+		const rotatorTimeline = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+		rotatorTimeline.timeScale(0.3);
+
+		// Animamos las palabras
+		for (let i = 0; i < words.length; i++) {
+			let delay = i - 1;
+			let wordTL = gsap.timeline();
+
+			if (i !== 0) {
+				gsap.set(words[i], { opacity: 1 });  // Aseguramos que la palabra esté visible
+				wordTL.from(words[i], { duration: 0.5, yPercent: 100, opacity: 0, ease: "power4.out" });
+			} else {
+				// Primera palabra, la mostramos inmediatamente
+				delay += 1;
+				gsap.set(words[0], { opacity: 1, yPercent: 0 });
+			}
+
+			// Aplicamos la salida hacia arriba a todas las palabras, incluida la última
+			wordTL.to(words[i], { duration: 0.5, yPercent: -100, opacity: 0, ease: "power4.out" });
+
+			rotatorTimeline.add(wordTL, delay);  // Añadimos cada palabra al timeline
+		}
+	});
+</script>
+
+
+<style>
+  #container {
+    height: 100%;
+  }
+
+  main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rotator {
+    position: relative;
+    width: 730px;
+    height: 150px;
+    text-align: center;
+    overflow: hidden; /* Solo se ve lo que está dentro del contenedor */
+  }
+
+  .rotator span {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;              /* Todas las palabras empiezan desde la misma posición */
+    left: 0;
+    width: 100%;
+  }
+
+  .caprasimo {
+    font-family: 'Caprasimo', system-ui;
+    position: relative;
+  }
+</style>

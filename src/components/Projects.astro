@@ -1,0 +1,64 @@
+---
+import ProjectIcon from '../components/logo/Projects.astro'
+
+const project = [
+    {
+        id:"project1",
+        title: "San Pedro de Atacama",
+        description: "Parte del camino a rio salado o mas conocido como piedra de la coca en san pedro de atacama, chile",
+        gridClass: "md:col-start-1 md:row-start-1 md:row-span-2",
+        image: "/assets/Projects/Project01.mov",
+        link: "https://www.instagram.com/p/DCiAVp6MNm7/",
+    },
+    {
+        id:"project2",
+        title: "Fit Royz Argentina",
+        description: "Aproximación de trekking al monte fitz roy ubicado en el Chalten, Argentina la capital del trekking",
+        gridClass: "md:col-start-2 md:row-start-2 md:row-span-2",
+        image: "/assets/Projects/Project02.mov",
+        link: "https://www.instagram.com/p/C7DRxQqubIH/",
+    },
+];
+---
+
+<section>
+    <ol class="projects grid grid-cols-1 gap-24 md:grid-cols-2 lg:gap-44">
+        {
+            project.map((project) => (
+                <li id={project.id} class={`flex flex-col ${project.gridClass}`}>
+                    <div class="relative flex flex-col items-center col-span-6 row-span-5 transition duration-500 ease-in-out transform hover:shadow-xl overflow-clip rounded-xl md:group-hover:-translate-y-1">
+                        {" "}
+                        <a
+                            href={project.link} target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Project ${project.title}`}
+                        >
+                            <video
+                                src={project.image}
+                                autoplay loop muted
+                                class="h-[40rem] rounded-md w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                            />
+                        </a>
+                    </div>
+                    
+                    <div class="px-2 py-8 dark:text-zinc-100">
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="flex items-center justify-between text-base font-medium"
+                        >
+                            <h3 class="font-mono text-base font-medium uppercase tracking-wide md:mt-0">
+                                {project.title}
+                            </h3>
+                            <div class="flex items-center text-right text-xs hover:text-amber-700">
+                                <ProjectIcon class="size-6" />
+                                <p class="ms-1">Ver Reels → </p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            ))
+        }
+    </ol>
+</section>

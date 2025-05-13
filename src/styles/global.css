@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.mt-n2 {
+ margin-top: -2rem;
+}
