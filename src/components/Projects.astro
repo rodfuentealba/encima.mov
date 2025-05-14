@@ -7,7 +7,8 @@ const project = [
         title: "San Pedro de Atacama",
         description: "Parte del camino a rio salado o mas conocido como piedra de la coca en san pedro de atacama, chile",
         gridClass: "md:col-start-1 md:row-start-1 md:row-span-2",
-        image: "/assets/Projects/Project01.mp4",
+        image: "./assets/Projects/Project01.mp4",
+        poster: "./assets/Projects/posterProject01.png",
         link: "https://www.instagram.com/p/DCiAVp6MNm7/",
         aos: 'fade-up',
         aosDelay: '0'
@@ -17,7 +18,8 @@ const project = [
         title: "Fit Royz Argentina",
         description: "Aproximación de trekking al monte fitz roy ubicado en el Chalten, Argentina la capital del trekking",
         gridClass: "md:col-start-2 md:row-start-2 md:row-span-2",
-        image: "/assets/Projects/Project02.mp4",
+        image: "./assets/Projects/Project02.mp4",
+        poster: "./assets/Projects/posterProject02.png",
         link: "https://www.instagram.com/p/C7DRxQqubIH/",
         aos: 'fade-up',
         aosDelay: '200'
@@ -44,7 +46,8 @@ const project = [
                             <video
                                 src={project.image}
                                 autoplay loop muted
-                                class="h-[200px] md:h-[40rem] rounded-md h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                                poster={project.poster}
+                                class="md:h-[40rem] rounded-md h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                             />
                         </a>
                     </div>
