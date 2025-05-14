@@ -21,6 +21,45 @@ const { description, title } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Open Graph -->
+		<meta
+			property="og:title"
+			content="Encima Studio - Creatividad"
+		/>
+		<meta
+			property="og:description"
+			content="Creación de contenidos audiovisuales 🎥, desde fotografía 📸 hasta videos con drones 🚁 y contenido 🤳🏽 para resaltar tu marca y proyectos."
+		/>
+		<meta
+			property="og:image"
+			content="https://www.encima.mov/ogImage.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.encima.mov" />
+		<meta property="og:image:alt" content="Creación de contenidos audiovisuales 🎥, desde fotografía 📸 hasta videos con drones 🚁 y contenido 🤳🏽 para resaltar tu marca y proyectos." />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Encima Studio - Creatividad"
+		/>
+		<meta
+			name="twitter:description"
+			content="Creación de contenidos audiovisuales 🎥, desde fotografía 📸 hasta videos con drones 🚁 y contenido 🤳🏽 para resaltar tu marca y proyectos."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://www.encima.mov/ogImage.png"
+		/>
+		<meta
+			name="twitter:image:alt"
+			content="Captura del portafolio de Encima Studio - Creatividad"
+		/>
+
 		<script src="https://unpkg.com/two-up-element@1"></script>
 		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 		<script is:inline>
@@ -33,19 +72,31 @@ const { description, title } = Astro.props
 		});
 		</script>
 	</head>
-	<body class="bg-zinc-100 dark:bg-zinc-900 overflow-x-hidden">
-		<Header class="z-10"></Header>
+	<body class="w-full bg-zinc-100 dark:bg-zinc-900 overflow-x-hidden">
+		<Header></Header>
 		<slot/>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
+	html {
 		margin: 0;
 		width: 100%;
 		height: 100%;
 		font-family: 'Poppins', sans-serif;
 		scroll-behavior: smooth;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		overscroll-behavior: none;
+	}
+
+	@media (prefers-reduce-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>

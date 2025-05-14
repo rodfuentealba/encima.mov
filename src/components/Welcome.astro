@@ -29,7 +29,7 @@ const randomVideo = videos[Math.floor(Math.random() * videos.length)];
     >
       <h1 class="text-xl font-thin tracking-widest text-center" data-aos="fade-up">somos</h1>
       <h1 class="caprasimo text-7xl md:text-9xl overflow-hidden relative" data-aos="fade-up">
-        <div class="rotator">
+         <div class="rotator w-[370px] md:w-[700px]">
           <span></span>
           <span>contenido</span>
           <span>drone</span>
@@ -41,7 +41,7 @@ const randomVideo = videos[Math.floor(Math.random() * videos.length)];
       <span
         data-aos="zoom-in-up"
         data-aos-delay="300"
-        class="bg-teal-200 text-teal-700 text-xs uppercase font-medium me-2 px-4 py-1 rounded-sm mt-20 mb-5"
+        class="text-center md:text-left bg-teal-200 text-teal-700 text-xs uppercase font-medium me-2 px-4 py-1 rounded-sm mt-20 mb-5"
         >Contáctame para una consulta gratuita</span
       >
       <p 
@@ -129,14 +129,12 @@ const randomVideo = videos[Math.floor(Math.random() * videos.length)];
   }
 
   main {
-    height: 100%;
     display: flex;
     justify-content: center;
   }
 
   .rotator {
     position: relative;
-    width: 730px;
     height: 150px;
     text-align: center;
     overflow: hidden; /* Solo se ve lo que está dentro del contenedor */
