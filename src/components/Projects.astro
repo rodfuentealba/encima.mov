@@ -45,7 +45,10 @@ const project = [
                         >
                             <video
                                 src={project.image}
-                                autoplay loop muted
+                                autoplay
+                                muted
+                                playsinline
+                                loop
                                 poster={project.poster}
                                 class="h-[500px] md:h-[40rem] rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                             />
