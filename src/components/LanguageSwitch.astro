@@ -1,0 +1,40 @@
+---
+import LanguajeES from '../components/logo/LanguajeES.astro'
+import LanguajeUS from '../components/logo/LanguajeUS.astro'
+const { pathname } = Astro.url;
+
+// Detecta si estás en /en o en la raíz /
+const isEnglish = pathname.startsWith("/en");
+const basePath = isEnglish ? pathname.replace("/en", "") || "/" : pathname;
+
+// Arma las URLs de cambio de idioma
+const spanishURL = basePath;
+const englishURL = "/en" + basePath;
+---
+
+<button type="button" data-dropdown-toggle="language-dropdown-menu" class="languaje inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-zinc-100 dark:text-zinc-100 rounded-lg cursor-pointer">
+  {isEnglish ? <LanguajeUS class="mr-2 size-6" /> : <LanguajeES class="mr-2 size-6" />}
+  {isEnglish ? "English (US)" : "Español (ES)"}
+</button>
+
+<!-- Dropdown -->
+<div class="z-50 absolute overflow-hidden top-12 hidden my-4 text-base list-none bg-zinc-100 rounded-lg shadow-sm" id="language-dropdown-menu">
+  <ul class="font-medium" role="none">
+    <li>
+      <a href={spanishURL} class={`block px-4 py-2 text-sm ${!isEnglish ? "text-amber-700 bg-amber-100" : "text-zinc-700 hover:bg-amber-100"}`} role="menuitem">
+        <div class="inline-flex items-center">
+          <LanguajeES class="mr-2 size-6" />
+          Español (ES)
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href={englishURL} class={`block px-4 py-2 text-sm ${isEnglish ? "text-amber-700 bg-amber-100" : "text-zinc-700 hover:bg-amber-100"}`} role="menuitem">
+        <div class="inline-flex items-center">
+          <LanguajeUS class="mr-2 size-6" />
+          English (US)
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

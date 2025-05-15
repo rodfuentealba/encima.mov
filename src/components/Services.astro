@@ -5,10 +5,11 @@ import Service03 from '../components/icons/GlassCham.astro'
 import Service04 from '../components/icons/FocusCenter.astro'
 import Service05 from '../components/icons/Carambola.astro'
 
+const { t } = Astro.props;
 const services = [
   {
-    title: 'outdoor',
-    description: 'Capturamos paisajes y aventuras con drones y cámaras de alta resolución',
+    title: t.outdoorTitle,
+    description: t.outdoorText,
     image: '/projects/services/service-01.webp',
     icon: Service01,
     span: 'col-span-full md:col-span-3',
@@ -16,8 +17,8 @@ const services = [
     aosDelay: '0'
   },
   {
-    title: 'empresas',
-    description: 'Contenido audiovisual corporativo que resalta tu marca',
+    title: t.briefcaseTitle,
+    description: t.briefcaseText,
     image: '/projects/services/service-02.webp',
     icon: Service02,
     span: 'col-span-full md:col-span-2',
@@ -25,8 +26,8 @@ const services = [
     aosDelay: '200'
   },
   {
-    title: 'eventos',
-    description: 'Registramos momentos clave de tu evento, desde bodas hasta conferencias, con un toque único',
+    title: t.eventTitle,
+    description: t.eventText,
     image: '/projects/services/service-03.webp',
     icon: Service03,
     span: 'col-span-full md:col-span-2',
@@ -34,8 +35,8 @@ const services = [
     aosDelay: '400'
   },
   {
-    title: 'indoor',
-    description: 'Grabamos espacios interiores con equipos profesionales, cuidando la iluminación y la estabilidad de cada toma',
+    title: t.indoorTitle,
+    description: t.indoorText,
     image: '/projects/services/service-04.webp',
     icon: Service04,
     span: 'col-span-full md:col-span-3',
@@ -43,8 +44,8 @@ const services = [
     aosDelay: '600'
   },
   {
-    title: 'deportivos',
-    description: 'Capturamos la energía de competencias deportivas con tomas aéreas dinámicas y seguras. Ideal para eventos en estadios, carreras, partidos o actividades al aire libre que buscan una cobertura audiovisual impactante',
+    title: t.sportsTitle,
+    description: t.sportsText,
     image: '/projects/services/service-05.webp',
     icon: Service05,
     span: 'col-span-full',
@@ -53,6 +54,13 @@ const services = [
   },
 ];
 ---
+<button
+			data-aos="fade-up"
+			data-aos-delay="300"
+			type="button"
+			class="text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
+			>{t.Title}</button
+		>
 
 <div class="grid gap-6 md:grid-cols-5 md:gap-6 mt-30">
   {services.map(({ aos,aosDelay, title, description, image, icon: Icon, span }) => (

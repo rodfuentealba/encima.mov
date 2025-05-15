@@ -1,10 +1,11 @@
 ---
 import ProjectIcon from '../components/logo/Projects.astro'
+const { t } = Astro.props;
 
 const project = [
     {
         id:"project1",
-        title: "San Pedro de Atacama",
+        title: t.projectPost1,
         description: "Parte del camino a rio salado o mas conocido como piedra de la coca en san pedro de atacama, chile",
         gridClass: "md:col-start-1 md:row-start-1 md:row-span-2",
         image: "./assets/Projects/Project01.mp4",
@@ -15,7 +16,7 @@ const project = [
     },
     {
         id:"project2",
-        title: "Fit Royz Argentina",
+        title: t.projectPost2,
         description: "Aproximación de trekking al monte fitz roy ubicado en el Chalten, Argentina la capital del trekking",
         gridClass: "md:col-start-2 md:row-start-2 md:row-span-2",
         image: "./assets/Projects/Project02.mp4",
@@ -28,6 +29,14 @@ const project = [
 ---
 
 <section>
+    <button
+		data-aos="fade-up"
+        type="button"
+        class="mb-30 text-gray-900 border border-gray-800 font-medium rounded-lg text-lg px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
+        >
+        {t.projectTitle}
+    </button>
+
     <ol class="projects grid grid-cols-1 gap-8 md:gap-24 md:grid-cols-2 lg:gap-44">
         {
             project.map((project) => (
@@ -61,7 +70,7 @@ const project = [
                             </h3>
                             <div class="flex items-center text-right text-xs hover:text-amber-700">
                                 <ProjectIcon class="size-6" />
-                                <p class="ms-1">Ver Reels → </p>
+                                <p class="ms-1">{t.TextLink} → </p>
                             </div>
                         </a>
                     </div>
@@ -69,4 +78,21 @@ const project = [
             ))
         }
     </ol>
+
+    <div class="flex items-center justify-center pt-10">
+			<a
+				href="https://www.instagram.com/byencima/"
+				target="_blank"
+				class="transition duration-100 hover:scale-105"
+			>
+				<button
+					data-aos="fade-up"
+					data-aos-delay="300"
+					type="button"
+					class="mb-10 md:mb-30 text-gray-900 border border-gray-800 hover:bg-amber-500 hover:text-amber-900 hover:border-amber-500 hover:cursor-pointer font-medium rounded-lg text-sm px-8 py-2 text-center dark:border-gray-200 dark:text-gray-200"
+					>
+                    {t.btnLink}
+                </button>
+			</a>
+		</div>
 </section>

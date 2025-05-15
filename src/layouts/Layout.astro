@@ -21,6 +21,8 @@ const { description, title } = Astro.props
 		<meta name="description" content={description}>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+		<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
@@ -73,6 +75,7 @@ const { description, title } = Astro.props
 			});
 		});
 		</script>
+
 	</head>
 	<body class="w-full bg-zinc-100 dark:bg-zinc-900 overflow-x-hidden">
 		<Header></Header>

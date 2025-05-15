@@ -1,15 +1,15 @@
 ---
-import SectionContainer from "../components/SectionContainer.astro";
-import Welcome from "../components/Welcome.astro";
-import Layout from "../layouts/Layout.astro";
-import Projects from "../components/Projects.astro";
-import Info from "../components/Info.astro";
-import Services from "../components/Services.astro";
-import PostPro from "../components/PostPro.astro";
-import Edit from "../components/Edit.astro";
-import Footer from "../components/Footer.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import Welcome from "../../components/Welcome.astro";
+import Layout from "../../layouts/Layout.astro";
+import Projects from "../../components/Projects.astro";
+import Info from "../../components/Info.astro";
+import Services from "../../components/Services.astro";
+import PostPro from "../../components/PostPro.astro";
+import Edit from "../../components/Edit.astro";
+import Footer from "../../components/Footer.astro";
 
-import es from '../i18n/es.json'
+import en from '../../i18n/en.json'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -19,26 +19,26 @@ import es from '../i18n/es.json'
 	title="Encima Studio | Diseño, Contenido & Operador de Drone"
 	description="Contrata nuestros servicios audiovisuales / gráficos para darle mas vida a tus creaciones"
 >
-	<Welcome class="py-20 md:py-0" t={es.header}/>
+	<Welcome class="py-20 md:py-0" t={en.header}/>
 
 	<SectionContainer id="encima" class="py-20 md:py-30 md:pb-0 px-6 md:px-0 text-center">
-		<Info t={es.info}/>
+		<Info t={en.info}/>
 	</SectionContainer>
 
 	<SectionContainer id="services" class="pb-20 md:py-30 px-6 md:px-0 text-center">
-		<Services t={es.services}/>
+		<Services t={en.services}/>
 	</SectionContainer>
 
 	<div id="post">
 		<SectionContainer class="px-8 md:px-0 text-center">
-			<Edit t={es.post}/>
+			<Edit t={en.post}/>
 		</SectionContainer>
 		<PostPro />
 	</div>
 
 	<SectionContainer id="project" class="pt-30 px-6 md:px-0 text-center">
-		<Projects t={es.project}/>
+		<Projects t={en.project}/>
 	</SectionContainer>
 
-	<Footer t={es.footer}/>
+	<Footer t={en.footer}/>
 </Layout>

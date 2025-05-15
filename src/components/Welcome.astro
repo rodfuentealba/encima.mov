@@ -7,6 +7,8 @@ const videos = [
 
 // Elegimos un video aleatorio antes de renderizar
 const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+const { t } = Astro.props;
 ---
 
 <div id="container">
@@ -21,60 +23,59 @@ const randomVideo = videos[Math.floor(Math.random() * videos.length)];
       poster={randomVideo.poster}
     >
       <source src={randomVideo.src} type="video/mp4" />
-      Tu navegador no soporta el formato de video.
+      {t.error}
     </video>
 
     <!-- Contenido sobre el video -->
     <div
       class="relative z-10 flex flex-col items-center justify-center w-full h-full bg-zinc-900/30 p-10 text-zinc-100"
     >
-      <h1 class="text-xl font-thin tracking-widest text-center" data-aos="fade-up">somos</h1>
+      <h1 class="text-xl font-thin tracking-widest text-center" data-aos="fade-up">
+        {t.weare}
+      </h1>
       <h1 class="caprasimo text-7xl md:text-9xl overflow-hidden relative" data-aos="fade-up">
-         <div class="rotator w-[370px] md:w-[700px]">
-          <span></span>
-          <span>contenido</span>
-          <span>drone</span>
-          <span>videos</span>
-          <span>diseño</span>
+        <div class="rotator w-[370px] md:w-[700px]">
+          {t.rotatingWords.map((word: string) => <span>{word}</span>)}
         </div>
       </h1>
 
       <span
         data-aos="zoom-in-up"
         data-aos-delay="300"
-        class="text-center md:text-left bg-teal-200 text-teal-700 text-xs uppercase font-medium me-2 px-4 py-1 rounded-sm mt-20 mb-5"
-        >Contáctame para una consulta gratuita</span
+        class="text-center md:text-left bg-gray-900 text-gray-100 text-xs uppercase font-medium me-2 px-4 py-1 rounded-sm mt-20 mb-5"
+        >{t.labelContact}</span
       >
       <p 
         class="w-full md:w-150 text-center text-pretty mx-auto font-light"
         data-aos="fade-up"
         data-aos-delay="500">
-        Soy diseñador gráfico y operador de drone con un ojo fotográfico
-        afinado. Te ayudo a crear contenido visual que esté por encima de todos.
+        {t.textContent}
       </p>
 
       <div class="flex flex-col items-center">
         <a
-        href="https://wa.me/56974375744?text=Hola Rodolfo, me encantó tu trabajo y me gustaría saber más sobre tus servicios audiovisuales"
+        href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/rodfuentealbauno/30min'});return false;"
         target="_blank"
         rel="noopener noreferrer"
         data-aos="zoom-in-up"
         data-aos-delay="700"
       >
-        <button class="animate-bounce mt-10 rounded-lg px-4 py-2 mb-5 font-bold bg-zinc-800 hover:bg-zinc-900 transition delay-100 duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
-          Comunícate conmigo 😄
+        <button class="animate-bounce mt-10 rounded-lg px-4 py-2 font-bold bg-teal-300 text-teal-700 hover:bg-teal-600 hover:text-teal-400 transition delay-100 duration-200 ease-in-out hover:cursor-pointer hover:-translate-y-1 hover:scale-105">
+          {t.btnContact}
         </button>
+
       </a>
 
 
 
+
         <p
-          class="text-xs transition delay-100 duration-200 ease-in-out hover:scale-105"
+          class="mt-10 text-xs transition delay-100 duration-200 ease-in-out hover:scale-105"
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          o desplácese <a href="#Projects" class="hover:underline"
-            >hacia abajo para explorar más</a
+          {t.scrollDown} <a href="#project" class="hover:underline"
+            >{t.scrollDownLink}</a
           >
         </p>
       </div>

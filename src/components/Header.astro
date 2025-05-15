@@ -1,7 +1,6 @@
 ---
 import LogoHori from '../components/logo/LogoHori.astro'
-import LanguajeES from '../components/logo/LanguajeES.astro'
-import LanguajeUS from '../components/logo/LanguajeUS.astro'
+import LanguageSwitch from "../components/LanguageSwitch.astro";
 
 let scrolled = false;
 ---
@@ -19,31 +18,7 @@ let scrolled = false;
         <span class="hidden md:block caprasimo text-zinc-100  dark:text-zinc-100 ms-3 text-4xl">ncima</span>
     </a>
     <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
-        <button type="button" data-dropdown-toggle="language-dropdown-menu" class="languaje inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-zinc-100 dark:text-zinc-100 rounded-lg cursor-pointer">
-            <LanguajeES class="mr-2 size-6" />
-            Español (ES)
-        </button>
-        <!-- Dropdown -->
-        <div class="z-50 absolute overflow-hidden top-12 hidden my-4 text-base list-none bg-zinc-100 rounded-lg shadow-sm " id="language-dropdown-menu">
-          <ul class="font-medium" role="none">
-            <li>
-              <a href="#" class="block px-4 py-2 text-sm text-amber-700 bg-amber-100" role="menuitem">
-                <div class="inline-flex items-center">
-                    <LanguajeES class="mr-2 size-6" />
-                    Español (ES)
-                </div>
-              </a>
-            </li>
-            <li>
-                <a href="#" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-amber-100" role="menuitem">
-                  <div class="inline-flex items-center">
-                      <LanguajeUS class="mr-2 size-6" />
-                      English (US)
-                  </div>
-                </a>
-              </li>
-          </ul>
-        </div>
+         <LanguageSwitch /> 
     </div>
     </div>
   </nav>

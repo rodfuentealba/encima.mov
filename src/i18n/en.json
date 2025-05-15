@@ -1,0 +1,53 @@
+{
+  "header": {
+    "error": "Your browser doesn’t support the video format.",
+    "weare": "we are",
+    "rotatingWords": ["", "content", "drone", "videos", "design"],
+    "labelContact": "Let’s chat, no pressure",
+    "textContent": "I’m a graphic designer and drone pilot with a sharp eye for capturing unique moments. I help you create visual content that stands out.",
+    "btnContact": "Book a video call 📅",
+    "scrollDown": "or scroll",
+    "scrollDownLink": "down to explore more"
+  },
+  "info": {
+    "studioTitle": "Encima®",
+    "studioText": "ı is a creative studio focused on drones, design, and visual content",
+    "content": "We make quality visuals that connect with your audience and keep up with today’s trends."
+  },
+  "services": {
+    "Title": "Services",
+    "outdoorTitle": "outdoor",
+    "outdoorText": "We capture landscapes and adventures with drones and high-quality cameras.",
+    "briefcaseTitle": "business",
+    "briefcaseText": "We create content that makes your brand look sharp.",
+    "eventTitle": "events",
+    "eventText": "We film your important moments: weddings, concerts, launches, or whatever you have in mind.",
+    "indoorTitle": "indoor",
+    "indoorText": "We shoot indoor spaces with care and style. We focus on lighting, angles, and flow to make your place look just how you imagined.",
+    "sportsTitle": "sports",
+    "sportsText": "We capture the energy of sports with dynamic aerial shots. Perfect for races, matches, or whatever gets you moving."
+  },
+  "post": {
+    "postTitle": "Postproduction",
+    "postText": "We edit your content with pro tools like",
+    "postTextLink": "DaVinci Resolve, Premiere Pro, and After Effects",
+    "content": "With postproduction, we add that final touch that makes everything shine."
+  },
+  "project": {
+    "projectTitle": "Projects",
+    "projectPost1": "San Pedro de Atacama",
+    "projectPost2": "Fitz Roy - Argentina",
+    "TextLink": "see Reels",
+    "btnLink": "Check out all projects"
+  },
+  "footer": {
+    "link1": "About",
+    "link2": "Services",
+    "link3": "Postproduction",
+    "link4": "Projects",
+    "nameCopyright": "Encima Studio™",
+    "allCopyright": "All rights reserved.",
+    "nameMade": "Made with ♥️ by",
+    "nameMadeRod": "rodFuentealba"
+  }
+}
