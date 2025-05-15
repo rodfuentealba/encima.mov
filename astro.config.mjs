@@ -1,16 +1,20 @@
 import { defineConfig } from 'astro/config';
-
+import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  site: 'https://encima.mov',
+
   server: {
     devOptions: {
-      open: false, // Evita abrir automáticamente el navegador
-      disableDevTools: true // Desactiva la barra de herramientas de desarrollo
+      open: false,
+      disableDevTools: true
     }
   },
 
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+
+  integrations: [sitemap()]
 });
