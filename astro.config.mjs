@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://encima.mov',
-
+  output: 'static',
   server: {
     devOptions: {
       open: false,
